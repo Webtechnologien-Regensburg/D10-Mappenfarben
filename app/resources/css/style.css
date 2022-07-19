@@ -1,0 +1,196 @@
+@import "https://fonts.googleapis.com/css2?family=Schoolbell&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap";
+
+:root {
+    --background: #ffffffff;
+    --black: #353531ff;
+    --blue: #016fb9ff;
+    --foreground: #0A0908ff;
+    --green: #149911ff;
+    --grey: #aaaaaaff;
+    --orange: #ff9505ff;
+    --red: #E15554ff;
+    --white: #f9f9f9ff;
+    --yellow: #E1BC29ff
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+.hidden {
+    display: none !important
+}
+
+h1 {
+    background-image: linear-gradient(90deg, #149911 8.33%, #016fb9 8.33%, #016fb9 16.67%, #e15554 16.67%, #e15554 25%, #e1bc29 25%, #e1bc29 33.33%, #ff9505 33.33%, #ff9505 41.67%, #353531 41.67%, #353531 50%, #149911 50%, #149911 58.33%, #016fb9 58.33%, #016fb9 66.67%, #e15554 66.67%, #e15554 75%, #e1bc29 75%, #e1bc29 83.33%, #ff9505 83.33%, #ff9505 91.67%, #353531 91.67%, #353531 100%);
+    background-size: 192px 192px;
+    color: var(--background);
+    font-size: 5vh;
+    font-weight: 700;
+    height: 5vh;
+    letter-spacing: .1em;
+    line-height: 5vh;
+    margin: 0;
+    padding: 1vh;
+    text-shadow: 2px 2px var(--foreground);
+    text-transform: uppercase
+}
+
+#folders {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5vh auto;
+    width: 98vw
+}
+
+#folders .folder-container {
+    display: block;
+    width: 14vw
+}
+
+#folders .folder-container .folder {
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 1vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    justify-content: space-around
+}
+
+#folders .folder-container .folder select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--background);
+    border: none;
+    border-radius: .5vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5vh;
+    font-weight: 300;
+    line-height: 5vh;
+    outline: none;
+    text-align: center;
+    width: 90%
+}
+
+#folders .folder-container .usage {
+    list-style-type: none;
+    margin: 4vh auto;
+    padding: 0;
+    width: 100%
+}
+
+#folders .folder-container .usage li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .5vh 0;
+    width: 100%
+}
+
+#folders .folder-container .usage li .subject {
+    background-color: var(--foreground);
+    border-radius: .5vh;
+    color: var(--background);
+    flex-basis: 80%;
+    font-weight: 400;
+    text-align: center
+}
+
+#folders .folder-container .usage li .percentage-number {
+    flex-basis: 15%;
+    font-weight: 600;
+    text-align: center
+}
+
+#folders .folder-container .usage li .percentage-number:after {
+    content: "%"
+}
+
+#user {
+    display: block;
+    font-size: 3vh;
+    line-height: 5vh;
+    margin: 0 auto;
+    text-align: center;
+    width: 90vw
+}
+
+#user strong {
+    font-size: 4vh;
+    font-weight: 600;
+    line-height: 6vh
+}
+
+#user input,
+#user select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--grey);
+    border: none;
+    border-radius: .5vh;
+    color: var(--background);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3vh;
+    font-weight: 300;
+    line-height: 3vh;
+    outline: none;
+    padding: .25vh;
+    text-align: center
+}
+
+#user input {
+    max-width: 5vw
+}
+
+#user input:hover,
+#user select:hover {
+    cursor: pointer
+}
+
+#user input[type=button] {
+    background-color: var(--foreground);
+    font-weight: 600;
+    line-height: 5vh;
+    margin-top: 5vh;
+    min-width: 20vw !important
+}
+
+#folders .folder-container.green .folder,
+#folders .folder-container.green .usage li .subject {
+    background-color: var(--green)
+}
+
+#folders .folder-container.red .folder,
+#folders .folder-container.red .usage li .subject {
+    background-color: var(--red)
+}
+
+#folders .folder-container.blue .folder,
+#folders .folder-container.blue .usage li .subject {
+    background-color: var(--blue)
+}
+
+#folders .folder-container.yellow .folder,
+#folders .folder-container.yellow .usage li .subject {
+    background-color: var(--yellow)
+}
+
+#folders .folder-container.orange .folder,
+#folders .folder-container.orange .usage li .subject {
+    background-color: var(--orange)
+}
+
+#folders .folder-container.black .folder,
+#folders .folder-container.black .usage li .subject {
+    background-color: var(--black)
+}
